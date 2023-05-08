@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -14,7 +14,7 @@ import { HeroesModule } from './heroes/heroes.module';
 import { StatesModule } from './states/states.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -33,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ]
+  //schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   // Diagnostic only: inspect router configuration
