@@ -28,11 +28,6 @@ const appRoutes: Routes = [
     loadChildren: () => import('./states/states.module').then(m => m.StatesModule),
     data: { preload: true }
   },
-  {
-    path: 'skus',
-    loadChildren: () => import('./skus/skus.module').then(m => m.SkusModule),
-    data: { preload: true }
-  },
   { path: '',   redirectTo: '/superheroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -12,7 +12,6 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { StatesModule } from './states/states.module';
-import { SkusModule } from './skus/skus.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +23,6 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HeroesModule,
     StatesModule,
-    SkusModule,
     AuthModule,
     AppRoutingModule,
     HttpClientModule

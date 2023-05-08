@@ -22,17 +22,18 @@ export class StateService {
     this.messageService.add(`StateService: ${message}`);
   }
 
-  private statesUrl = 'http://localhost:8081/camel/api/v1/states';  // URL to web api
-  
   handleError(title: string) {
 	  return null;
   }
+  
+  private APIURL = 'http://localhost:3000/states';
+  private httpHeaders: HttpHeaders = new HttpHeaders({
+    'Access-Control-Allow-Origin': 'http://localhost:4200'
+  });
 
   getStates(): Observable<State[]> {
-    //console.log(this.http.get<State[]>(this.statesUrl));
-    //return this.http.get<State[]>(this.statesUrl)
-	  return of(STATES);
-	  //return null;
+    //return of(STATES);
+    return this.http.get<State[]>(this.APIURL, { headers: this.httpHeaders } );	  
   }
 
   getState(id: number | string) {

@@ -1,9 +1,0 @@
-<h2>Skus</h2>
-<ul class="skus">
-  <li *ngFor="let sku of skus$ | async" [class.selected]="sku.id === selectedId">
-    <a [routerLink]="['/sku', sku.id]">
-      <span class="badge">{{ sku.id }}</span>{{ sku.name }}
-    </a>
-  </li>
-</ul>
-
