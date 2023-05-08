@@ -1,0 +1,10 @@
+<h2>States</h2>
+<div *ngIf="state$ | async as state">
+  <h3>{{ state.name }}</h3>
+  <p>Id: {{ state.id }}</p>
+  <label for="state-name">State name: </label>
+  <input type="text" id="state-name" [(ngModel)]="state.name" placeholder="name"/>
+  <label for="state-code">State code: </label>
+  <input type="text" id="state-code" [(ngModel)]="state.code" placeholder="code"/>
+  <button type="button" (click)="gotoStates(state)">Back</button>
+</div>

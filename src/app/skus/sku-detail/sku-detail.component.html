@@ -1,0 +1,10 @@
+<h2>Skus</h2>
+<div *ngIf="sku$ | async as sku">
+  <h3>{{ sku.name }}</h3>
+  <p>Id: {{ sku.id }}</p>
+  <label for="sku-name">Sku name: </label>
+  <input type="text" id="sku-name" [(ngModel)]="sku.name" placeholder="name"/>
+  <label for="sku-barcode">Sku barcode: </label>
+  <input type="text" id="sku-barcode" [(ngModel)]="sku.barcode" placeholder="barcode"/>
+  <button type="button" (click)="gotoSkus(sku)">Back</button>
+</div>

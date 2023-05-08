@@ -1,0 +1,9 @@
+<h2>States</h2>
+<ul class="states">
+  <li *ngFor="let state of states$ | async" [class.selected]="state.id === selectedId">
+    <a [routerLink]="['/state', state.id]">
+      <span class="badge">{{ state.id }}</span>{{ state.name }}
+    </a>
+  </li>
+</ul>
+
